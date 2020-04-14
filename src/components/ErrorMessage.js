@@ -21,8 +21,6 @@ const ErrorList = styled.ul`
 
 export default class ErrorMessage extends Component {
   renderMessageArray = errors => {
-    console.log("Errros ");
-    console.log(errors);
     
     const constraints = errors.map(( error, idx) =>
       <li key={idx}>{error}</li>
