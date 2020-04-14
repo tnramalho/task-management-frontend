@@ -21,17 +21,19 @@ const ErrorList = styled.ul`
 
 export default class ErrorMessage extends Component {
   renderMessageArray = errors => {
-    const constraints = errors.map(error =>
-      Object.values(error.constraints))
-      .flat()
-      .map((constraint, idx) => <li key={idx}>{constraint}</li>);
+    console.log("Errros ");
+    console.log(errors);
+    
+    const constraints = errors.map(( error, idx) =>
+      <li key={idx}>{error}</li>
+      );
 
     return <ErrorList>{constraints}</ErrorList>;
   };
 
   render() {
     const { message } = this.props;
-
+    
     return (
       <ErrorContainer>
         <ErrorHeading>Oops!</ErrorHeading>
